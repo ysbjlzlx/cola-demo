@@ -1,7 +1,7 @@
 package com.example.demo.base.helper;
 
 import com.alibaba.cola.exception.BizException;
-import com.example.demo.common.enums.BizExceptionEnums;
+import com.example.demo.base.enums.BizExceptionEnums;
 
 /**
  * @author where

@@ -1,8 +1,8 @@
 package com.example.demo.base.response;
 
 import com.alibaba.cola.dto.SingleResponse;
-import com.example.demo.base.constants.Constants;
-import com.example.demo.common.enums.BizExceptionEnums;
+import com.example.demo.base.contants.Constants;
+import com.example.demo.base.enums.BizExceptionEnums;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

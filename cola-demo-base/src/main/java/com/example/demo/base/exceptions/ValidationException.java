@@ -36,6 +36,24 @@ public class ValidationException extends javax.validation.ValidationException {
         this.errors.put(field, messages);
     }
 
+    public void setError(String field, List<String> messages) {
+        this.errors.put(field, messages);
+    }
+
+    public static ValidationException of(String field, String message) {
+        ValidationException exception = new ValidationException();
+        exception.addError(field, message);
+
+        return exception;
+    }
+
+    public static ValidationException of(String field, List<String> messages) {
+        ValidationException exception = new ValidationException();
+        exception.setError(field, messages);
+
+        return exception;
+    }
+
     /**
      * 处理 GET 请求中 使用 @Valid 验证路径中请求实体校验失败后抛出的异常
      *

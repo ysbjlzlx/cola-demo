@@ -1,11 +1,11 @@
 package com.example.demo.domain.auth.service;
 
-import com.example.demo.common.enums.BizExceptionEnums;
-import com.example.demo.common.helper.BizExceptionHelper;
+import com.example.demo.base.enums.BizExceptionEnums;
+import com.example.demo.base.helper.BizExceptionHelper;
+import com.example.demo.domain.UserDTO;
+import com.example.demo.domain.UserTokenDTO;
 import com.example.demo.domain.auth.event.UserLoginFailureEvent;
 import com.example.demo.domain.auth.request.UsernameLoginQry;
-import com.example.demo.domain.dto.UserDTO;
-import com.example.demo.domain.dto.UserTokenDTO;
 import com.example.demo.domain.gateway.UserInfoGatewayI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

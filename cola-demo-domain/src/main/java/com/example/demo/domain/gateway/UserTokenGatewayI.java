@@ -1,6 +1,6 @@
 package com.example.demo.domain.gateway;
 
-import com.example.demo.domain.dto.UserTokenDTO;
+import com.example.demo.domain.UserTokenDTO;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 

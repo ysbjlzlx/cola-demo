@@ -2,7 +2,7 @@ package com.example.demo.base.helper;
 
 import com.alibaba.cola.dto.Response;
 import com.alibaba.cola.dto.SingleResponse;
-import com.example.demo.common.enums.BizExceptionEnums;
+import com.example.demo.base.enums.BizExceptionEnums;
 
 import java.util.Collections;
 import java.util.List;

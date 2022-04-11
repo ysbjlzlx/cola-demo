@@ -1,7 +1,7 @@
 package com.example.demo.infrastructure.gatewayimpl;
 
 import com.example.demo.domain.auth.request.UserRegisterCmd;
-import com.example.demo.domain.dto.UserDTO;
+import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.gateway.UserInfoGatewayI;
 import com.example.demo.infrastructure.convertor.UserConvertor;
 import com.example.demo.infrastructure.dao.UserDaoImpl;

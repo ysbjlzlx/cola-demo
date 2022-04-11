@@ -1,7 +1,7 @@
 package com.example.demo.adapter.api.model.request;
 
 import com.alibaba.cola.dto.Command;
-import com.example.demo.base.annotation.validator.Equals;
+import com.example.demo.base.validator.annotation.Equals;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

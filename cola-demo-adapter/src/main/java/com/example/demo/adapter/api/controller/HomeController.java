@@ -1,7 +1,7 @@
 package com.example.demo.adapter.api.controller;
 
 import com.alibaba.cola.dto.SingleResponse;
-import com.example.demo.common.AuthContext;
+import com.example.demo.base.AuthContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,7 @@
 package com.example.demo.domain.gateway;
 
+import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.request.UserRegisterCmd;
-import com.example.demo.domain.dto.UserDTO;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 

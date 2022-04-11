@@ -1,7 +1,7 @@
 package com.example.demo.domain.auth.event;
 
+import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.request.UserRegisterCmd;
-import com.example.demo.domain.dto.UserDTO;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 

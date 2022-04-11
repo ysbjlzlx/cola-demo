@@ -1,6 +1,6 @@
 package com.example.demo.infrastructure.gatewayimpl;
 
-import com.example.demo.domain.dto.UserTokenDTO;
+import com.example.demo.domain.UserTokenDTO;
 import com.example.demo.domain.gateway.UserTokenGatewayI;
 import com.example.demo.infrastructure.convertor.UserTokenConvertor;
 import com.example.demo.infrastructure.dao.UserTokenDaoImpl;

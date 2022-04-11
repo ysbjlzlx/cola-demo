@@ -1,6 +1,6 @@
 package com.example.demo.domain.auth.event;
 
-import com.example.demo.common.enums.BizExceptionEnums;
+import com.example.demo.base.enums.BizExceptionEnums;
 import com.example.demo.domain.auth.request.UserRegisterCmd;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;

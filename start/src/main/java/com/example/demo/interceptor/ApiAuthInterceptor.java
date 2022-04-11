@@ -1,7 +1,13 @@
 package com.example.demo.interceptor;
 
 import com.alibaba.cola.dto.Response;
+import com.example.demo.base.AuthContext;
 import com.example.demo.base.contants.HttpHeaderConstants;
+import com.example.demo.base.enums.BizExceptionEnums;
+import com.example.demo.base.helper.ResponseHelper;
+import com.example.demo.base.utils.JSONUtils;
+import com.example.demo.domain.UserDTO;
+import com.example.demo.domain.auth.service.UserTokenService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

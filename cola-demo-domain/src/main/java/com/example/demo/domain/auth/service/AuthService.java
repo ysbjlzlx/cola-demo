@@ -1,12 +1,12 @@
 package com.example.demo.domain.auth.service;
 
+import com.example.demo.base.enums.BizExceptionEnums;
+import com.example.demo.base.helper.BizExceptionHelper;
 import com.example.demo.base.utils.NumberUtils;
-import com.example.demo.common.enums.BizExceptionEnums;
-import com.example.demo.common.helper.BizExceptionHelper;
+import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.event.UserRegisterFailureEvent;
 import com.example.demo.domain.auth.event.UserRegisterSuccessEvent;
 import com.example.demo.domain.auth.request.UserRegisterCmd;
-import com.example.demo.domain.dto.UserDTO;
 import com.example.demo.domain.gateway.UserInfoGatewayI;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

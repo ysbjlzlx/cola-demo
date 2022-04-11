@@ -1,8 +1,6 @@
 package com.example.demo.infrastructure.dataobject;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,6 +16,12 @@ public class UserDO {
     private Long id;
     private String username;
     private String password;
+    @Version
+    private Integer version;
+    @TableLogic
+    private LocalDateTime deletedAt;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updatedAt;
+    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createdAt;
 }

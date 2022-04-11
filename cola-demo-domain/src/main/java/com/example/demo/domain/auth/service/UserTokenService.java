@@ -1,7 +1,7 @@
 package com.example.demo.domain.auth.service;
 
 import com.example.demo.base.enums.BizExceptionEnums;
-import com.example.demo.base.helper.BizExceptionHelper;
+import com.example.demo.base.factories.BizExceptionFactory;
 import com.example.demo.base.utils.NumberUtils;
 import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.UserTokenDTO;
@@ -43,7 +43,7 @@ public class UserTokenService {
             return userTokenDTO;
         }
         log.error("user token create failure {}", userTokenDTO);
-        throw BizExceptionHelper.of(BizExceptionEnums.SYSTEM_EXECUTE_ERROR);
+        throw BizExceptionFactory.of(BizExceptionEnums.SYSTEM_EXECUTE_ERROR);
     }
 
     public UserDTO getUserByToken(String token) {

@@ -94,6 +94,11 @@
                 <version>${cola.components.version}</version>
             </dependency>
             <!--COLA components End-->
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
             <!--Spring Boot-->
 
             <!--Spring Boot End-->

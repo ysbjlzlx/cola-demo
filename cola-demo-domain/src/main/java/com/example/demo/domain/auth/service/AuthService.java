@@ -1,7 +1,7 @@
 package com.example.demo.domain.auth.service;
 
 import com.example.demo.base.enums.BizExceptionEnums;
-import com.example.demo.base.helper.BizExceptionHelper;
+import com.example.demo.base.factories.BizExceptionFactory;
 import com.example.demo.base.utils.NumberUtils;
 import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.event.UserRegisterFailureEvent;
@@ -44,7 +44,7 @@ public class AuthService {
         boolean isExists = userInfoGatewayI.isExistsByUsername(cmd.getUsername());
         if (isExists) {
             applicationContext.publishEvent(new UserRegisterFailureEvent(this, cmd, BizExceptionEnums.USERNAME_IS_EXISTS));
-            throw BizExceptionHelper.of(BizExceptionEnums.USERNAME_IS_EXISTS);
+            throw BizExceptionFactory.of(BizExceptionEnums.USERNAME_IS_EXISTS);
         }
         cmd.setPassword(passwordEncoder.encode(cmd.getPassword()));
         Long id = userInfoGatewayI.createUser(cmd);

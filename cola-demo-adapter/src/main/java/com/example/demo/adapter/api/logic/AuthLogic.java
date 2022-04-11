@@ -8,7 +8,7 @@ import com.example.demo.adapter.api.model.request.UsernameLoginCmd;
 import com.example.demo.adapter.api.model.request.UsernameRegisterCmd;
 import com.example.demo.adapter.api.model.response.LoginTokenVO;
 import com.example.demo.base.enums.BizExceptionEnums;
-import com.example.demo.base.helper.ResponseHelper;
+import com.example.demo.base.factories.ResponseFactory;
 import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.request.UserRegisterCmd;
 import com.example.demo.domain.auth.service.AuthService;
@@ -43,7 +43,7 @@ public class AuthLogic {
         if (null != userDTO) {
             return Response.buildSuccess();
         }
-        return ResponseHelper.buildFailure(BizExceptionEnums.USER_REGISTER_FAILURE);
+        return ResponseFactory.buildFailure(BizExceptionEnums.USER_REGISTER_FAILURE);
     }
 
     public SingleResponse<LoginTokenVO> login(UsernameLoginCmd cmd) {

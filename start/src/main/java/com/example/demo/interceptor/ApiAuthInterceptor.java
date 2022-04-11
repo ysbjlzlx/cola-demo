@@ -4,7 +4,7 @@ import com.alibaba.cola.dto.Response;
 import com.example.demo.base.AuthContext;
 import com.example.demo.base.contants.HttpHeaderConstants;
 import com.example.demo.base.enums.BizExceptionEnums;
-import com.example.demo.base.helper.ResponseHelper;
+import com.example.demo.base.factories.ResponseFactory;
 import com.example.demo.base.utils.JSONUtils;
 import com.example.demo.domain.UserDTO;
 import com.example.demo.domain.auth.service.UserTokenService;
@@ -65,7 +65,7 @@ public class ApiAuthInterceptor implements HandlerInterceptor {
     private void dealInvalidTokenResponse(HttpServletResponse response) {
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-        Response content = ResponseHelper.buildFailure(BizExceptionEnums.USER_INVALID_TOKEN);
+        Response content = ResponseFactory.buildFailure(BizExceptionEnums.USER_INVALID_TOKEN);
         try {
             OutputStream outputStream = response.getOutputStream();
             outputStream.write(Objects.requireNonNull(JSONUtils.toJSONString(content)).getBytes(StandardCharsets.UTF_8));

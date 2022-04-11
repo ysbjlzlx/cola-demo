@@ -3,6 +3,7 @@ package com.example.demo.base.jackson;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
+import com.fasterxml.jackson.databind.util.ISO8601Utils;
 
 import javax.validation.constraints.NotNull;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class LocalDateTimeToISO8601Serializer extends StdSerializer<LocalDateTim
         if (localDateTime == null) {
             return;
         }
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssZZ");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSXXX");
         String str = ZonedDateTime.of(localDateTime, zoneId).format(dtf);
         jsonGenerator.writeString(str);
     }

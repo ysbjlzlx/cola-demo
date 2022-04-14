@@ -11,5 +11,5 @@ import org.mapstruct.Mapper;
 public interface UserTokenConvertor {
     UserTokenDO of(UserTokenDTO source);
 
-    UserTokenDTO of(UserTokenDO userTokenPO);
+    UserTokenDTO of(UserTokenDO userTokenDO);
 }

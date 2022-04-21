@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -14,6 +15,7 @@ import java.util.Date;
  * @since 2022/4/11
  */
 public class DateTimeUtils {
+    public static final String DATE_TIME = "yyyy-MM-dd HH:mm:ss";
     public static final String ISO8601_DATE = "yyyy-MM-dd";
     public static final String ISO8601_TIME = "HH:mm:ss";
     public static final String ISO8601_DATE_TIME = "yyyy-MM-dd'T'HH:mm:ss";
@@ -73,5 +75,10 @@ public class DateTimeUtils {
         calendar.set(Calendar.SECOND, 59);
         calendar.set(Calendar.MILLISECOND, 999);
         return calendar.getTime();
+    }
+
+    public static String datetime(Date date) {
+        return DateTimeFormatter.ofPattern(DATE_TIME)
+                .format(ZonedDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault()));
     }
 }

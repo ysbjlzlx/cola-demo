@@ -99,6 +99,15 @@
             <!--Spring Boot-->
 
             <!--Spring Boot End-->
+            <!--Third Plugins Start-->
+            <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-spring-boot-web-starter -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-web-starter</artifactId>
+                <version>1.9.0</version>
+            </dependency>
+            <!--Third Plugins End-->
+
             <!-- Editor -->
             <dependency>
                 <groupId>org.jetbrains</groupId>

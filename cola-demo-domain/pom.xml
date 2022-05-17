@@ -39,6 +39,10 @@
             <artifactId>spring-security-crypto</artifactId>
         </dependency>
         <!-- COLA components End-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <!-- Editor -->
         <dependency>
             <groupId>org.projectlombok</groupId>
